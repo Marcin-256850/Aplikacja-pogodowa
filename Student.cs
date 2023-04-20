@@ -1,13 +1,16 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static WinFormsApp1.WeatherInfo;
 
 namespace WinFormsApp1
 {
-    internal class WeatherInfo
+    public class WeatherInfo
     {
+
         public class coord
         {
             public double lat { get; set; }
@@ -24,6 +27,7 @@ namespace WinFormsApp1
 
         public class main
         {
+            public string name { get; set; }
             public double temp { get; set; }
 
             public double feels_like { get; set; }
@@ -44,20 +48,17 @@ namespace WinFormsApp1
             public main main { get; set; }
             public wind wind { get; set; }
 
-
-            public override string ToString() {
-                string str = "";
-                double temp = this.main.temp-273.5;
-                str = "Współrzędne: " + this.coord.lat + " " + this.coord.lon +"\r\n"+ "Pogoda: " + this.weather[0].description + "\r\nTemperatura: " + temp.ToString("n2") +"°C";
-                return str;
-            }
-
             public static implicit operator string?(root? v)
             {
                 throw new NotImplementedException();
             }
+
         }
+        
     }
-}
+
+
+    }
+
 
 
