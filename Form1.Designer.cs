@@ -43,6 +43,7 @@
             textBox10 = new TextBox();
             pictureBox1 = new PictureBox();
             button2 = new Button();
+            listBox1 = new ListBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -233,6 +234,15 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 15;
+            listBox1.Location = new Point(335, 156);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(120, 94);
+            listBox1.TabIndex = 15;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -241,6 +251,7 @@
             BackgroundImage = Properties.Resources.thunderstorm_3625405__480;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(470, 338);
+            Controls.Add(listBox1);
             Controls.Add(button2);
             Controls.Add(pictureBox1);
             Controls.Add(textBox10);
@@ -281,5 +292,6 @@
         private TextBox textBox10;
         private PictureBox pictureBox1;
         private Button button2;
+        private ListBox listBox1;
     }
 }
