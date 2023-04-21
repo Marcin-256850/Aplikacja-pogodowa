@@ -19,7 +19,6 @@ namespace WinFormsApp1
         public string avg { get; set; }
         public override string ToString()
         {
-            return $"{nazwa}: {avg}";
         }
     }
     public class heat : DbContext
